@@ -1,0 +1,83 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nombre": "Admin",
+      "email": "admin@ejemplo.com",
+      "password": "123456",
+      "rol": "admin"
+    },
+    {
+      "id": 2,
+      "nombre": "Profesor Juan",
+      "email": "profesor@ejemplo.com",
+      "password": "123456",
+      "rol": "profesor"
+    },
+    {
+      "id": 3,
+      "nombre": "Estudiante María",
+      "email": "estudiante@ejemplo.com",
+      "password": "123456",
+      "rol": "estudiante"
+    }
+  ],
+  "cursos": [
+    {
+      "id": 1,
+      "codigo": "CS101",
+      "nombre": "Introducción a la Programación",
+      "descripcion": "Curso básico de programación con JavaScript",
+      "creditos": 4,
+      "profesor": "Dr. Juan Pérez"
+    },
+    {
+      "id": 2,
+      "codigo": "MAT201",
+      "nombre": "Cálculo I",
+      "descripcion": "Fundamentos de cálculo diferencial e integral",
+      "creditos": 5,
+      "profesor": "Dra. Ana López"
+    },
+    {
+      "id": 3,
+      "codigo": "FIS101",
+      "nombre": "Física General",
+      "descripcion": "Conceptos básicos de física clásica",
+      "creditos": 4,
+      "profesor": "Dr. Carlos Ruiz"
+    }
+  ],
+  "estudiantes": [
+    {
+      "id": 1,
+      "nombre": "María García",
+      "email": "maria@ejemplo.com",
+      "edad": 20,
+      "carrera": "Ingeniería de Sistemas"
+    },
+    {
+      "id": 2,
+      "nombre": "Pedro Martínez",
+      "email": "pedro@ejemplo.com",
+      "edad": 22,
+      "carrera": "Ingeniería Industrial"
+    }
+  ],
+  "matriculas": [
+    {
+      "id": 1,
+      "estudianteId": 1,
+      "cursoId": 1,
+      "fecha": "2025-01-15",
+      "estado": "activo"
+    },
+    {
+      "id": 2,
+      "estudianteId": 1,
+      "cursoId": 2,
+      "fecha": "2025-01-15",
+      "estado": "activo"
+    }
+  ]
+}

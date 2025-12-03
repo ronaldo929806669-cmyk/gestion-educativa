@@ -1,0 +1,100 @@
+<div class="editar-curso-container">
+  <div class="form-header">
+    <h2>{{ esNuevo ? 'Nuevo Curso' : 'Editar Curso' }}</h2>
+    <button class="btn btn-secondary" routerLink="/cursos">
+      <i class="fas fa-arrow-left"></i> Volver
+    </button>
+  </div>
+
+  <form [formGroup]="cursoForm" (ngSubmit)="onSubmit()" class="curso-form">
+    
+    <div class="form-group">
+      <label for="codigo">Código del Curso *</label>
+      <input 
+        type="text" 
+        id="codigo" 
+        formControlName="codigo"
+        placeholder="Ej: CS101"
+        class="form-control"
+      >
+      <div class="error-message" *ngIf="cursoForm.get('codigo')?.invalid && cursoForm.get('codigo')?.touched">
+        <span *ngIf="cursoForm.get('codigo')?.errors?.['required']">El código es requerido</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="nombre">Nombre del Curso *</label>
+      <input 
+        type="text" 
+        id="nombre" 
+        formControlName="nombre"
+        placeholder="Ej: Introducción a la Programación"
+        class="form-control"
+      >
+      <div class="error-message" *ngIf="cursoForm.get('nombre')?.invalid && cursoForm.get('nombre')?.touched">
+        <span *ngIf="cursoForm.get('nombre')?.errors?.['required']">El nombre es requerido</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="descripcion">Descripción</label>
+      <textarea 
+        id="descripcion" 
+        formControlName="descripcion"
+        placeholder="Descripción del curso"
+        class="form-control"
+        rows="4"
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="creditos">Créditos *</label>
+      <input 
+        type="number" 
+        id="creditos" 
+        formControlName="creditos"
+        placeholder="Ej: 3"
+        class="form-control"
+        min="1"
+        max="10"
+      >
+      <div class="error-message" *ngIf="cursoForm.get('creditos')?.invalid && cursoForm.get('creditos')?.touched">
+        <span *ngIf="cursoForm.get('creditos')?.errors?.['required']">Los créditos son requeridos</span>
+        <span *ngIf="cursoForm.get('creditos')?.errors?.['min']">Mínimo 1 crédito</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="profesor">Profesor *</label>
+      <input 
+        type="text" 
+        id="profesor" 
+        formControlName="profesor"
+        placeholder="Nombre del profesor"
+        class="form-control"
+      >
+      <div class="error-message" *ngIf="cursoForm.get('profesor')?.invalid && cursoForm.get('profesor')?.touched">
+        <span *ngIf="cursoForm.get('profesor')?.errors?.['required']">El profesor es requerido</span>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="button" class="btn btn-secondary" routerLink="/cursos">
+        Cancelar
+      </button>
+      <button type="submit" class="btn btn-primary" [disabled]="cursoForm.invalid || loading">
+        <span *ngIf="loading">Guardando...</span>
+        <span *ngIf="!loading">{{ esNuevo ? 'Crear Curso' : 'Guardar Cambios' }}</span>
+      </button>
+    </div>
+
+    <div class="alert alert-success" *ngIf="successMessage">
+      {{ successMessage }}
+    </div>
+
+    <div class="alert alert-error" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </div>
+
+  </form>
+</div>
