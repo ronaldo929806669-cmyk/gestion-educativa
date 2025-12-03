@@ -1,59 +1,88 @@
-# GestionEducativa
+# 🎓 Sistema de Gestión Educativa
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.5.
+Aplicación web desarrollada en Angular para la gestión de cursos, usuarios y estudiantes con autenticación JWT y control de acceso por roles.
 
-## Development server
+## 🚀 Características
 
-To start a local development server, run:
+- ✅ Autenticación con JWT
+- ✅ Control de acceso por roles (Administrador, Profesor, Estudiante)
+- ✅ CRUD completo de cursos y usuarios
+- ✅ Protección de rutas con Guards
+- ✅ Navegación SPA
+- ✅ Interfaz responsiva con Bootstrap
 
+## 🛠️ Tecnologías
+
+- Angular 19
+- TypeScript 5.6
+- Bootstrap 5
+- RxJS
+
+## 📋 Requisitos Previos
+
+- Node.js v18 o superior
+- npm v9 o superior
+- Angular CLI v19
+
+## 📦 Instalación
+
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/ronaldo929806669-cmyk/gestion-educativa.git
+cd gestion-educativa
+```
+
+### 2. Instalar dependencias
+```bash
+npm install
+```
+
+## ▶️ Ejecución
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+La aplicación estará disponible en: **http://localhost:4200**
 
-## Code scaffolding
+## 🔐 Credenciales de Prueba
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+**Administrador:**
+- Email: admin@escuela.com
+- Contraseña: admin123
 
-```bash
-ng generate component component-name
+**Profesor:**
+- Email: profesor@escuela.com
+- Contraseña: profe123
+
+**Estudiante:**
+- Email: estudiante@escuela.com
+- Contraseña: est123
+
+## 📁 Estructura del Proyecto
+```
+src/app/
+├── core/           # Guards, interceptores, servicios
+├── features/       # Módulos (auth, dashboard, cursos, usuarios)
+└── shared/         # Componentes compartidos
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🛡️ Seguridad
 
-```bash
-ng generate --help
-```
+- JWT almacenado en localStorage
+- Guards para protección de rutas
+- Interceptores HTTP para tokens automáticos
 
-## Building
+## 👥 Equipo de Desarrollo
 
-To build the project run:
+- Ronaldo Ponce Huamali
+- [Nombre Compañero 2]
+- [Nombre Compañero 3]
 
-```bash
-ng build
-```
+## 📞 Contacto
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- Email: ronaldo929806669@gmail.com
+- GitHub: [@ronaldo929806669-cmyk](https://github.com/ronaldo929806669-cmyk)
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Desarrollado con ❤️ usando Angular**
